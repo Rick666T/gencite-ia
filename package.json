@@ -1,0 +1,10 @@
+{
+  "name": "gencite-ia",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generador de citas y referencias de IA generativa y directorio académico de políticas. Autor: Ricardo Tavira Sánchez, 2026.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

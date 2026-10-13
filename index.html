@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<meta content="Generador de citas, referencias, créditos y notas de IA generativa, basado en normas oficiales. Ricardo Tavira Sánchez, 2026." name="description"/>
+<title>GenCite IA | Generador de citas, referencias y créditos</title>
+<link href="icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="app.js" type="module"></script>
+
+<script src="help.js" type="module"></script></head>
+<body>
+<header class="topbar">
+<div class="topbar-inner">
+<div class="brand"><span aria-hidden="true" class="brand-mark">G<span class="brand-tick">.</span></span><div class="brand-copy"><b>GenCite <span>IA</span></b><small>Generador bibliográfico especializado</small></div></div>
+<nav aria-label="Navegación principal" class="site-nav"><a aria-current="page" href="index.html">Generador</a><a href="politicas.html">Políticas y guías</a></nav>
+<div class="topbar-side"><span class="offline-mark"><span class="offline-dot"></span>Sin enviar datos</span><button class="text-button" id="helpOpen" type="button">Ayuda<span aria-hidden="true"> ?</span></button></div>
+</div>
+</header>
+<main class="app-shell">
+
+<section aria-labelledby="pageHeading" class="intro">
+<p class="eyebrow">CITACIÓN DE INTELIGENCIA ARTIFICIAL GENERATIVA</p>
+<h1 id="pageHeading">Cita la IA con fundamento.</h1>
+<p class="intro-description">Elabora <strong>citas breves</strong>, <strong>referencias completas</strong> y <strong>créditos de figuras o tablas</strong> sin confundir sus funciones. Consulta las instrucciones originales de cada estilo y las políticas académicas reunidas en el directorio.</p>
+</section>
+<section aria-label="Diferencias entre resultados" class="definitions">
+<div><span aria-hidden="true" class="term-symbol">“ ”</span><div><b>Cita</b><small>Identifica una fuente en el texto</small></div></div>
+<div><span aria-hidden="true" class="term-symbol">≡</span><div><b>Referencia</b><small>Datos completos al final del trabajo</small></div></div>
+<div><span aria-hidden="true" class="term-symbol">▧</span><div><b>Crédito o nota</b><small>Explica cómo se creó un elemento</small></div></div>
+</section>
+<div class="section-top"><div><span class="step-label">01 / SELECCIÓN</span><h2>Elige el estilo bibliográfico</h2></div><span class="method-indicator">6 estilos con orientación oficial</span></div>
+<div aria-label="Estilos bibliográficos" class="style-tabs" id="styleTabs" role="tablist"></div>
+<div class="style-options"><div aria-live="polite" class="style-description" id="styleIntro"></div><label class="language-control" for="dateLanguage">Idioma de la fecha <select aria-label="Idioma de la fecha en referencias" id="dateLanguage"><option selected="selected" value="es">Español (adaptación)</option><option value="en">Inglés (manual original)</option></select></label></div>
+<div class="section-top scenarios-top"><div><span class="step-label">02 / TIPO DE CONTENIDO</span><h2>¿Qué deseas documentar?</h2></div></div>
+<div aria-label="Casos de citación" class="scenario-grid" id="scenarioTabs" role="group"></div>
+<section aria-label="Formulario y resultados" class="workspace">
+<div class="entry-card" id="formPanel">
+<div class="card-head"><div><span class="step-label">03 / DATOS</span><h2 id="formTitle">Completa los campos</h2><p id="formDesc"></p></div></div>
+<form id="citationForm" novalidate="">
+<div id="formFields"></div>
+<div class="form-actions">
+<button class="primary-button" id="generateButton" type="submit"><span aria-hidden="true">✦</span> Generar resultados</button>
+<button class="secondary-button" id="exampleButton" type="button">Cargar ejemplo en español</button>
+<button class="quiet-button" id="clearButton" type="button">Limpiar</button>
+</div>
+<div class="error-box" hidden="" id="formErrors" role="alert"></div>
+</form>
+</div>
+<aside aria-label="Resultados bibliográficos" class="results-column" id="resultsPanel">
+<div class="result-card">
+<div class="card-head result-head"><div><span class="step-label">04 / COPIAR</span><h2>Resultados con formato listo para pegar</h2><p>Respeta cursivas, negritas y superíndices al usar «Copiar con formato». Revisa la tipografía al pegar en tu documento.</p></div><button class="tiny-button" hidden="" id="copyAll" type="button">Copiar todos con formato</button></div>
+<div aria-live="polite" class="output-area" id="outputArea"><div class="empty-state"><div aria-hidden="true" class="empty-icon">“ ”</div><b>Aquí aparecerán tus resultados</b><p>Completa los campos o carga un ejemplo. Cada cita, referencia o nota se copiará por separado.</p></div></div>
+<div aria-live="polite" class="copy-status" id="copyStatus"></div>
+</div>
+<div class="source-card" id="sourcesCard"><div class="source-title"><span aria-hidden="true">↗</span><h3>Verifica en la fuente oficial</h3></div><p>Abre directamente la documentación que respalda este caso:</p><div id="sourceLinks"></div></div>
+</aside>
+</section>
+
+
+</main>
+<footer class="footer"><span><strong>GenCite IA</strong> · © 2026 · <strong>Ricardo Tavira Sánchez</strong><br/><small>Versión web 2.1 · revisión documental: 13 de octubre de 2026</small></span><span>Citas y referencias especializadas · sitio sin servidor ni API</span></footer><dialog aria-labelledby="helpTitle" class="help-dialog" id="helpDialog">
+<div class="help-dialog-head"><div><span class="step-label">CONSULTA INMEDIATA</span><h2 id="helpTitle">Guía de uso de GenCite IA</h2></div><button aria-label="Cerrar guía de uso" class="help-close" id="helpClose" type="button">Cerrar ×</button></div>
+<div class="help-dialog-scroll">
+<section><h3>¿Para qué sirve esta herramienta?</h3><p><strong>Cita</strong>: identificación breve de una fuente dentro del texto. <strong>Referencia</strong>: información bibliográfica completa para localizarla. <strong>Nota o crédito</strong>: aclaración de la procedencia o intervención de IA en una figura, tabla o material. <strong>Declaración</strong>: informe transparente sobre cómo se utilizó la IA en el proceso académico. No son equivalentes ni siempre se requieren juntos.</p></section>
+<section><h3>Generar una cita o referencia</h3><ol><li>Abre <strong>Generador</strong> y selecciona APA, MLA, Chicago, ACS, AMA o IEEE.</li><li>Elige el caso concreto (chat, herramienta, figura, tabla, metodología, etc.).</li><li>Escribe datos auténticos o usa «Cargar ejemplo en español» para aprender. Los ejemplos son simulaciones didácticas.</li><li>Haz clic en «Generar resultados». Copia solo la cita, referencia, nota o declaración que efectivamente necesites.</li><li>Consulta los enlaces de <strong>fuente oficial</strong> y confirma los requisitos de tu curso, universidad o revista.</li></ol></section>
+<section><h3>Investigar políticas y guías</h3><ol><li>Entra en <strong>Políticas y guías</strong>, una página independiente.</li><li>Busca por universidad, tema o título; combina los filtros de ámbito, sector, tipo y nivel educativo.</li><li>Abre el documento original y comprueba si es una <strong>norma aprobada</strong>, una <strong>guía orientativa</strong>, una <strong>propuesta</strong> o un <strong>informe</strong>.</li><li>Consulta las ediciones anteriores cuando se identificaron y exporta el listado filtrado en CSV.</li></ol></section>
+<section><h3>Pregunta frecuente: ¿necesito dos citas en APA?</h3><p><strong>No.</strong> La cita parentética y la narrativa son <em>dos formas alternativas</em> de mencionar la misma fuente. En una tabla o figura propia creada con IA suele ser más útil el encabezado y la <em>Nota.</em> explicativa con atribución y las referencias de fuentes que correspondan. En Método se describe la participación de la IA; no es necesario duplicar la cita ya incluida en ese párrafo. Los requisitos de declaración y referencia dependen también del editor o institución.</p></section>
+<section><h3>Alcances, límites y privacidad</h3><p>GenCite IA no busca metadatos, no lee conversaciones, no valida URL en tiempo real, no determina permisos de autor ni comprueba políticas institucionales automáticamente. Las respuestas que copias proceden de tus propios campos; confirma año, versión, proveedor, URL, fuente de datos y nivel real de intervención. El sitio funciona sin backend: las entradas del generador se guardan exclusivamente en el almacenamiento de tu navegador.</p><p>Para conservar <em>cursivas</em>, <strong>negritas</strong> y superíndices utiliza «Copiar con formato». El interlineado y la sangría francesa deben revisarse en el procesador de texto.</p></section>
+<section class="help-caution"><h3>Información normativa</h3><p>El directorio es una selección de documentos generales de universidades, facultades, organismos de educación e investigación; <strong>excluye políticas de revistas y editoriales</strong>. Una guía no es automáticamente obligatoria. Las publicaciones de organismos y las políticas institucionales tienen alcances diferentes.</p></section>
+<div class="privacy-actions"><button class="quiet-button" id="eraseAll" type="button">Borrar datos locales del generador</button><span>Solo disponible en la página Generador.</span></div>
+</div>
+<div class="help-dialog-footer"><span>© 2026 · Ricardo Tavira Sánchez</span><button class="primary-button" id="helpDone" type="button">Entendido</button></div>
+</dialog>
+</body>
+</html>
