@@ -405,3 +405,195 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
  .policy-intro{padding:21px 21px;margin-top:14px;margin-bottom:19px;}
  .policy-intro h1{font-size:27px;}
 }
+
+/* ===============================================================
+   GenCite IA 2.1 - identidad academica oscura (octubre de 2026).
+   Cambio EXCLUSIVAMENTE cromatico: no altera estructura o logica.
+   Obsidiana, grafito, blanco suave y azul electrico accesible.
+   =============================================================== */
+:root {
+  color-scheme: dark;
+  --ink: #f1f5ff;
+  --muted: #b5c0d1;
+  --light-muted: #a7b5ca;
+  --bg: #0b0d13;
+  --surface: #171b25;
+  --line: #2c3343;
+  --line-strong: #46536a;
+  --navy: #e6efff;
+  --blue: #90bdff;
+  --accent: #64a3ff;
+  --accent-light: #162b4a;
+  --warn: #ffad9c;
+  --policy-card-shadow: 0 10px 30px rgba(0,0,0,.17);
+  color: var(--ink);
+  background: var(--bg);
+}
+html { background: var(--bg); }
+body { background: var(--bg); color: var(--ink); }
+a { color: var(--blue); }
+a:hover { color: #bbd6ff; }
+button:focus-visible, a:focus-visible, input:focus-visible,
+textarea:focus-visible, select:focus-visible {
+  outline-color: #79b3ff;
+}
+
+/* Barra de navegacion y marca */
+.topbar { background: #10141d; border-color: #2b3241; }
+.brand-mark { background: #2053a0; color: #ffffff; }
+.brand-tick { color: #b8d7ff; }
+.brand-copy b span { color: #78b0ff; }
+.brand-copy small, .topbar-side { color: var(--muted); }
+.offline-dot { background: #64a3ff; box-shadow: 0 0 0 3px #244168; }
+.site-nav a { color: #d5def1; }
+.site-nav a:hover { background: #1b2b43; color: #c4deff; }
+.site-nav a[aria-current="page"] {
+  background: #183259; color: #f5f8ff;
+  box-shadow: inset 0 -2px 0 #4b98ff;
+}
+.text-button { background: #18243a; color: #bcd8ff; border-color: #385478; }
+.text-button:hover { background: #213552; color: #ffffff; }
+
+/* Presentacion y conceptos */
+.intro {
+  background: linear-gradient(119deg, #141f33 0%, #151b2a 55%, #171823 100%);
+  border-color: #324563;
+}
+.intro:after {
+  border-color: #355a92;
+  box-shadow: 0 0 0 31px #1b2840, 0 0 0 32px #324967;
+}
+.intro h1 { color: #f5f7ff; }
+.intro-description { color: #c3ccdc; }
+.intro-description strong { color: #ffffff; }
+.eyebrow, .step-label, .info-index { color: #81b7ff; }
+.definitions, .entry-card, .result-card, .source-card,
+.policy-stat-grid>div, .policy-card, .policy-filter-box,
+.policy-update, .policy-results .policy-card, .information-grid article {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 5px 18px rgba(0,0,0,.10);
+}
+.definitions > div + div { border-color: var(--line); }
+.term-symbol { background: #203856; color: #a9d0ff; }
+.method-indicator { background: #171e2b; border-color: #38465d; color: #c2cfe0; }
+
+/* Navegacion entre estilos y modalidades */
+.style-tab, .scenario-button { background: #171b25; color: #f1f5ff; border-color: #394357; }
+.style-tab:hover, .scenario-button:hover { border-color: #6da9ff; background: #1b2637; }
+.style-tab[aria-selected="true"] {
+  background: #172f51; border-color: #4f9cff;
+  box-shadow: 0 4px 18px rgba(48,120,240,.16);
+}
+.style-tab[aria-selected="true"] .style-name { color: #b9d8ff; }
+.style-tab .style-edition, .scenario-description { color: #b4c0d2; }
+.scenario-button[aria-pressed="true"] {
+  background: #172941;
+  border-color: #579aff;
+  box-shadow: inset 0 0 0 1px #579aff;
+}
+.style-description { color: #b6c1d2; }
+
+/* Entradas de datos y acciones */
+.form-section, .policy-section, .information { border-color: var(--line); }
+.form-section-title, .policy-input-label { color: #e6efff; }
+.required-mark { color: #ffa695; }
+.field input, .field textarea, .field select,
+.language-control select, .policy-select-grid select, .policy-search-input input {
+  background: #0f1521;
+  color: #f3f6ff;
+  border-color: #43516a;
+}
+.field input:focus, .field textarea:focus, .field select:focus,
+.policy-search-input input:focus, .policy-select-grid select:focus {
+  outline-color: #65a2ff;
+  border-color: #65a2ff;
+}
+.field input::placeholder, .field textarea::placeholder,
+.policy-search-input input::placeholder { color: #99a8bf; opacity: 1; }
+.field small, .language-control, .privacy-actions p { color: var(--muted); }
+.field select option, .language-control select option, .policy-select-grid select option {
+  color: #f3f6ff; background: #121a28;
+}
+.primary-button, .policy-link {
+  background: #2467d9; border-color: #3479ee; color: #ffffff;
+}
+.primary-button:hover, .policy-link:hover { background: #1958bd; border-color: #5994f5; }
+.secondary-button {
+  background: #1b2f4a; border-color: #41638d; color: #d0e5ff;
+}
+.secondary-button:hover { background: #243e5c; border-color: #669ce6; }
+.quiet-button, .tiny-button, .help-close {
+  background: #171e2b; border-color: #46536a; color: #d5e6ff;
+}
+.quiet-button:hover, .tiny-button:hover, .help-close:hover {
+  background: #243149; border-color: #76aaff;
+}
+.error-box { background: #321e25; border-color: #8c4d5c; color: #ffd1ca; }
+
+/* Resultados: contraste oscuro solo en la pagina;
+   la funcion copiar con formato ya envia color #111 para Word. */
+.output { background: #121823; border-color: #344053; }
+.output-top { background: #1a2433; border-color: #344053; }
+.output-label, .advice b, .empty-state b { color: #e6efff; }
+.output-value { color: #f0f4ff; }
+.copy-button, .copy-plain {
+  background: #1b2f4a; color: #c8e1ff; border-color: #456d9e;
+}
+.copy-button:hover, .copy-plain:hover { background: #264064; }
+.empty-state { background: #101824; border-color: #405575; color: #afbdd0; }
+.empty-icon { background: #1b3152; color: #96c6ff; }
+.advice { background: #172333; border-color: #344b6a; color: #c2cee0; }
+.copy-status { color: #9dd4ff; }
+.source-link { border-color: var(--line); }
+.source-title>span { color: #7bb0ff; }
+
+/* Directorio: cabecera, filtros, estados y fichas */
+.policy-date { background: #182439; border-color: #3a516d; color: #b6cbe7; }
+.policy-date strong { color: #e9f1ff; }
+.policy-stat-grid>div { border-top-color: #498ffe; }
+.policy-stat-grid b { color: #eff5ff; }
+.policy-caution { background: #24212a; border-color: #57485d; color: #e4d6e0; }
+.policy-select-grid label { color: #d3dff2; }
+.policy-search-input>span { color: #8dbbff; }
+.policy-toolbar { border-color: var(--line); }
+.pill { background: #242b38; border-color: #41506a; color: #d4deec; }
+.pill-mexico { background: #162d43; border-color: #365776; color: #a3d6ff; }
+.pill-world { background: #25274a; border-color: #4c5687; color: #c2ccff; }
+.status-published { background: #183b33; border-color: #2e6757; color: #b7f0dc; }
+.status-guidance { background: #1b3150; border-color: #3c6194; color: #bbd8ff; }
+.status-proposed { background: #3b3020; border-color: #796040; color: #ffdfaa; }
+.policy-org { color: #87b7ff; }
+.policy-title { color: #eef4ff; }
+.policy-data { border-color: var(--line); }
+.policy-data dd { color: #dce4f2; }
+.policy-more { background: #1a2c45; border-color: #3a5b85; color: #c4deff; }
+.policy-more:hover { background: #243c5e; }
+.policy-history { border-color: var(--line); }
+.policy-empty { background: #171e2b; border-color: #496383; color: #c0cce0; }
+.howto-steps { background: #18273c; border-color: #355170; }
+.howto-steps h3 { color: #e6efff; }
+.howto-steps p { color: #bbcadf; }
+
+/* Ayuda: dialogo oscuro legible, sin cambios a su comportamiento. */
+.help-dialog {
+  background: #151b26; color: var(--ink);
+  border-color: #3b4a62;
+  box-shadow: 0 24px 90px rgba(0,0,0,.72);
+}
+.help-dialog::backdrop { background: rgba(0,0,0,.82); }
+.help-dialog-head, .help-dialog-footer {
+  background: #1b2433;
+  border-color: var(--line);
+}
+.help-dialog-scroll section { border-color: var(--line); }
+.help-dialog-scroll h3 { color: #eef4ff; }
+.help-dialog-scroll p, .help-dialog-scroll li { color: #c6d0e1; }
+.help-dialog-scroll .help-caution {
+  background: #212b3a; border-color: #465773;
+}
+.footer { background: #10141d; border-color: #2b3241; color: #a9b8cb; }
+.footer strong { color: #f1f5ff; }
+
+/* Seleccion azul coherente en todo el sitio. */
+::selection { background: #2d67ba; color: #ffffff; }
